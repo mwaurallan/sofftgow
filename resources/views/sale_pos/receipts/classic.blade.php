@@ -417,7 +417,7 @@
 						</td>
 					</tr>
 				<tr>
-					<th>Mpesa Till:</th>
+					<th>Mpesa Payments:</th>
 					<td>838934</td>
 				</tr>
         	</table>
