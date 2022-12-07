@@ -52,6 +52,7 @@ use App\Variation;
 use App\Warranty;
 use App\InvoiceLayout;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -595,6 +596,10 @@ class SellPosController extends Controller
 
         $business_details = $this->businessUtil->getDetails($business_id);
         $location_details = BusinessLocation::find($location_id);
+//        $id=Auth::user()->id;
+//
+//        dd($id);
+
         
         if ($from_pos_screen && $location_details->print_receipt_on_invoice != 1) {
             return $output;
@@ -618,6 +623,8 @@ class SellPosController extends Controller
         ];
         $receipt_details->currency = $currency_details;
         $till_details="8012484";
+        $id=Auth::user()->id;
+
 //        $rctmsg = "Thankyou For Shopping With Us";
 
         if ($is_package_slip) {
@@ -632,7 +639,7 @@ class SellPosController extends Controller
         } else {
             $layout = !empty($receipt_details->design) ? 'sale_pos.receipts.' . $receipt_details->design : 'sale_pos.receipts.classic';
 
-            $output['html_content'] = view($layout, compact('receipt_details','till_details'))->render();
+            $output['html_content'] = view($layout, compact('receipt_details','till_details','id'))->render();
         }
         
         return $output;
