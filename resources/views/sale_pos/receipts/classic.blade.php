@@ -435,15 +435,16 @@
 	</div>
 @endif
 
-@if(!empty($receipt_details->footer_text))
+@if(empty($receipt_details->footer_text))
 	<div class="row">
 		<div class="col-xs-12">
 			{!! $receipt_details->footer_text !!}
 			Till Number:
 			{{$till_details}}
 			<div>
-				<P><h3>Till No:92889292902</h3></P>
+				<P><h3>Till No:8012484</h3></P>
+				<P><h3>Thank you For Shopping With Us!!!!</h3></P>
 			</div>
-		</div>
+		</div>Powered By Savannabits Ltd-0725263425
 	</div>
 @endif
