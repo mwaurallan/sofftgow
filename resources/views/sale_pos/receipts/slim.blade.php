@@ -422,13 +422,20 @@
 					@endif
 
 					<!-- Total Due-->
-					@if(!empty($receipt_details->total_due))
+					@if(empty($receipt_details->total_due))
 						<tr>
-							<td class="width-50 text-right">
-								{!! $receipt_details->total_due_label !!}
+							<td class="width-50 text-center">
+{{--								{!! $receipt_details->total_due_label !!}--}}
+								<p><h5>Mpesa Till:8012484></h5></p>
 							</td>
 							<td class="width-50 text-right">
-								{{$receipt_details->total_due}}
+{{--								{{$receipt_details->total_due}}--}}
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><h5>Thankyou For Shopping With Us !!!!</h5></p>
 							</td>
 						</tr>
 					@endif
