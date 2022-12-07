@@ -426,7 +426,7 @@
 						<tr>
 							<td class="width-50 text-center">
 {{--								{!! $receipt_details->total_due_label !!}--}}
-								<p><h5>Mpesa Till:8012484></h5></p>
+								<p><h5>Mpesa Till:8012484</h5></p>
 							</td>
 							<td class="width-50 text-right">
 {{--								{{$receipt_details->total_due}}--}}
@@ -434,8 +434,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td>
-								<p><h5>Thankyou For Shopping With Us !!!!</h5></p>
+							<td colspan="4">
+								<p><h5>Thank you For Shopping With Us !!!!</h5></p>
 							</td>
 						</tr>
 					@endif
@@ -503,7 +503,7 @@
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
-}
+}ti
 
 .sub-headings{
 	font-size: 15px;
