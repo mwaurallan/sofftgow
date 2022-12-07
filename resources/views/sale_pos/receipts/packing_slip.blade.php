@@ -186,7 +186,7 @@
 	</div>
 </div>
 <div>
-	{{$till_details}}
+
 </div>
 <div class="row invoice-info color-555" style="page-break-inside: avoid !important">
 	<div class="col-md-6 invoice-col width-50">
