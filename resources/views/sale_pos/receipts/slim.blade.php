@@ -39,11 +39,11 @@
 				@if(!empty($receipt_details->contact))
 					<br/>{{ $receipt_details->contact }}
 				@endif
-				@if(!empty($receipt_details->contact) && !empty($receipt_details->website))
-					,
+				@if(!empty($receipt_details->contact))
+
 				@endif
 				@if(!empty($receipt_details->website))
-					{{ $receipt_details->website }}
+					<br/>{{ $receipt_details->website }}
 				@endif
 				@if(!empty($receipt_details->location_custom_fields))
 					<br>{{ $receipt_details->location_custom_fields }}
@@ -473,19 +473,20 @@
 	            </p>
             @endif
 
-             Barcode
+
 			@if($receipt_details->show_barcode)
 				<br/>
 				<img class="center-block" src="data:image/png;base64,{{DNS1D::getBarcodePNG($receipt_details->invoice_no, 'C128', 2,30,array(39, 48, 54), true)}}">
 			@endif
 
-			@if(!empty($receipt_details->footer_text))
+			@if(empty($receipt_details->footer_text))
 				<p class="centered">
-					{!! $receipt_details->footer_text !!}
+{{--					{!! $receipt_details->footer_text !!}--}}
+					Powered By Savannabits:0725263425
 				</p>
 			@endif
         </div>
-        <!-- <button id="btnPrint" class="hidden-print">Print</button>
+        <!-- <button id="btnPrint" class="hisdden-print">Print</button>
         <script src="script.js"></script> -->
     </body>
 </html>
