@@ -435,7 +435,7 @@
 						</tr>
 						<tr>
 							<td colspan="4">
-								<p><h5>Thank you For Shopping With Us !!!!</h5></p>
+								<p><h5>Thank you For Shopping With Uss !!!!</h5></p>
 							</td>
 						</tr>
 					@endif
